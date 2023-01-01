@@ -1,0 +1,58 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "target": "ES6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "isolatedModules": false,
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "noImplicitAny": true,
+        "removeComments": true,
+        //"noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "lib": ["DOM","ES2021.String"],
+        "paths": {
+            "@main/*": [
+                "src/main/*"
+            ],
+            "@style": [
+                "src/style/*"
+            ],
+            "@component/*": [
+                "src/main/components/*"
+            ],
+            "@core/*": [
+                "src/main/core/*"
+            ],
+            "@layout/*": [
+                "src/main/layout/*"
+            ],
+            "@mixin/*": [
+                "src/main/mixin/*"
+            ],
+            "@page/*": [
+                "src/main/page/*"
+            ],
+            "@store/*": [
+                "src/main/store/*"
+            ],
+            "@view/*": [
+                "src/main/view/*"
+            ],
+        }
+    },
+    "include": [
+        "src/main/**/*.ts",
+        "src/main/**/*.tsx",
+        "src/main/**/*.vue"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
