@@ -11,7 +11,7 @@ class DefaultViewContext<PrincipalType : Principal<*, *>>(
     private val session: UiSession<PrincipalType>
 ) : ViewContext {
 
-    final override val sessionInfo: SessionInfo get() = session.sessionInfo
+    override val sessionInfo: SessionInfo get() = session.sessionInfo
 
     val principal: PrincipalType = session.principal
 
@@ -31,4 +31,8 @@ class DefaultViewContext<PrincipalType : Principal<*, *>>(
     override fun callAction(
         action: ViewAction
     ) = session.send(ViewActionMessage(action))
+
+    object Mapper : SessionContextMapper {
+        override fun map(session: UiSession<*>): ViewContext = DefaultViewContext(session)
+    }
 }

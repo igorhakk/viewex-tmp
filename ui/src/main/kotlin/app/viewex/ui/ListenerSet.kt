@@ -50,6 +50,4 @@ class ListenerSet(
 
     override fun iterator(): Iterator<EventListener> = listeners.toList().iterator()
 
-
-
 }

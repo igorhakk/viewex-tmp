@@ -1,15 +1,14 @@
 package app.viewex.composer.layout.page
 
-import app.viewex.composer.Layout
 import app.viewex.composer.layout.LayoutDetails
-import app.viewex.composer.layout.LayoutMetadata
 import app.viewex.composer.layout.LayoutName
+import app.viewex.composer.layout.RoutedLayout
 import app.viewex.core.type.UrlPath
 
 abstract class PageLayout(
     parent: PageLayout? = null,
     name: String? = null
-) : Layout, LayoutMetadata.Routed {
+) : RoutedLayout {
 
     final override val name: LayoutName = name?.let {
         LayoutName(it)

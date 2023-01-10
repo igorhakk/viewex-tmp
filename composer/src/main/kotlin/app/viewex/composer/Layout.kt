@@ -1,5 +1,5 @@
 package app.viewex.composer
 
 interface Layout {
-    fun composeView(params: LayoutParams)
+    fun composeView(params: LayoutParams) : View
 }

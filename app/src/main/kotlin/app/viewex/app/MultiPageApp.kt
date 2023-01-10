@@ -9,7 +9,7 @@ import app.viewex.core.type.UrlPath
 abstract class MultiPageApp(
     context: ViewContext,
     appName: String? = null
-) : App {
+) : AppLayout {
 
     final override val name: LayoutName = appName?.let {
         LayoutName(it)

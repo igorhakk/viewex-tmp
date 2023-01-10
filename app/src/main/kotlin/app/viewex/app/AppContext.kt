@@ -5,7 +5,7 @@ import app.viewex.composer.View
 import app.viewex.composer.ViewContext
 import app.viewex.composer.layout.LayoutMetadata
 
-interface AppLayout : LayoutMetadata.Routed {
+interface AppContext : LayoutMetadata.Routed {
 
     val endpoints: Collection<Endpoint>
 
